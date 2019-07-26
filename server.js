@@ -1,8 +1,8 @@
 const express = require('express');
 const open = require('open');
 
-const app = express()
-const port = 5000
+const app = express();
+const port = process.env.PORT || 5000;
 
 function allowCrossDomain (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -16,7 +16,7 @@ app.use('/', express.static(`${__dirname}/public`));
 
 // Acts as a placeholder for the browser in this project. Otherwise the express global error handler will be triggered when the path is set to '/'
 app.get('/', (req, res) => {
-  res.json({'result': 'OK'});
+  res.send('index.html');
 });
 
 // Catches requests that fall through w/out triggering any route handlers, send 404 if no other route matched
