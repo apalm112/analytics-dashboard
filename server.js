@@ -1,5 +1,6 @@
 const express = require('express');
 const open = require('open');
+// const router = require('./routes.js');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -13,6 +14,10 @@ function allowCrossDomain (req, res, next) {
 
 app.use(allowCrossDomain);
 app.use('/', express.static(`${__dirname}/public`));
+
+// app.use('/', router);
+
+// TODO: add routes for taking authenticated User to analytics dashboard page.
 
 // Acts as a placeholder for the browser in this project. Otherwise the express global error handler will be triggered when the path is set to '/'
 app.get('/', (req, res) => {
