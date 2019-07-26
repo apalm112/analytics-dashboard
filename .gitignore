@@ -1,0 +1,9 @@
+node_modules/
+package-lock.json
+
+log
+my-notes.md
+
+.vsls.json
+
+Shards-Dashboard-Lite-1.1.0.zip
