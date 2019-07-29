@@ -1,8 +1,13 @@
 const express = require('express');
 const open = require('open');
+// const router = require('./routes.js');
 
 const app = express();
 const port = process.env.PORT || 5000;
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
 function allowCrossDomain (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -14,9 +19,13 @@ function allowCrossDomain (req, res, next) {
 app.use(allowCrossDomain);
 app.use('/', express.static(`${__dirname}/public`));
 
+// app.use('/', router);
+
+// TODO: add routes for taking authenticated User to analytics dashboard page.
+
 // Acts as a placeholder for the browser in this project. Otherwise the express global error handler will be triggered when the path is set to '/'
 app.get('/', (req, res) => {
-  res.send('index.html');
+  res.sendFile(express.static(`${__dirname}/public`));
 });
 
 // Catches requests that fall through w/out triggering any route handlers, send 404 if no other route matched
@@ -28,6 +37,10 @@ app.use((req, res, next) => {
 
 // global error handler { "error": {} }
 app.use((error, req, res, next) => {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  // render the error page
   res.status(error.status || 500)
     .json({ error: { message: error.message } });
 });
@@ -35,6 +48,6 @@ app.use((error, req, res, next) => {
 app.listen(port, async (err) => {
   if (err) { console.error('Something bad happened', err) }
 
-  console.log(`App running at: http://localhost:${port}`)
+  console.log(`Server is running at: http://localhost:${port}`)
   await open(`http://localhost:${port}`)
 });
