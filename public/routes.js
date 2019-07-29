@@ -19,7 +19,6 @@ router.get('/', (req, res) => {
       document.getElementById('signin-button').addEventListener('click', event => {
         event.preventDefault();
         userSession.redirectToSignIn();
-
       })
 
       document.getElementById('signout-button').addEventListener('click', event => {
@@ -28,7 +27,6 @@ router.get('/', (req, res) => {
         window.location = window.location.origin
       })
     });
-
     res.redirect('/index.html');
   }
 });
