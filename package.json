@@ -17,13 +17,15 @@
     "url": "https://github.com/blockstack/hello-blockstack/issues"
   },
   "homepage": "https://github.com/blockstack/hello-blockstack#readme",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
-    "browserify": "^16.2.3",
-    "express": "^4.17.1",
-    "open": "^6.1.0",
     "blockstack": "^19.1.0",
+    "browserify": "^16.2.3",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3",
+    "morgan": "^1.9.1",
+    "open": "^6.1.0",
     "path": "^0.12.7",
     "pug": "^2.0.4"
   }
