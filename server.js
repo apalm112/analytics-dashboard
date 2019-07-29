@@ -5,6 +5,10 @@ const open = require('open');
 const app = express();
 const port = process.env.PORT || 5000;
 
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
 function allowCrossDomain (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -33,6 +37,10 @@ app.use((req, res, next) => {
 
 // global error handler { "error": {} }
 app.use((error, req, res, next) => {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  // render the error page
   res.status(error.status || 500)
     .json({ error: { message: error.message } });
 });
