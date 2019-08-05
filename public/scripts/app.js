@@ -30,5 +30,6 @@ document.addEventListener("DOMContentLoaded", event => {
     userSession.handlePendingSignIn().then(userData => {
       window.location = 'dashboard.html'
     })
-  }
-})
+  }    
+
+}); // end of document.addEventListener("DOMContentLoaded", )
