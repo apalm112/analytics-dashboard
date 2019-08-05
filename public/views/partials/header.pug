@@ -1,0 +1,153 @@
+extends main
+  //-START OF DASHBOARD WRAPPER
+  #dash-wrapper
+    .color-switcher.animated
+      h5 Accent Color
+      ul.accent-colors
+        li.accent-primary.active(data-color='primary')
+          i.material-icons check
+        li.accent-secondary(data-color='secondary')
+          i.material-icons check
+        li.accent-success(data-color='success')
+          i.material-icons check
+        li.accent-info(data-color='info')
+          i.material-icons check
+        li.accent-warning(data-color='warning')
+          i.material-icons check
+        li.accent-danger(data-color='danger')
+          i.material-icons check
+      .actions.mb-4
+        a.mb-2.btn.btn-sm.btn-primary.w-100.d-table.mx-auto.extra-action(href='https://designrevision.com/downloads/shards-dashboard-lite/')
+          i.material-icons cloud
+          |  Download
+        a.mb-2.btn.btn-sm.btn-white.w-100.d-table.mx-auto.extra-action(href='https://designrevision.com/docs/shards-dashboard-lite')
+          i.material-icons book
+          |  Documentation
+      .social-wrapper
+        .social-actions
+          h5.my-2 Help us Grow
+          .inner-wrapper
+            a.github-button(href='https://github.com/DesignRevision/shards-dashboard' data-icon='octicon-star' data-show-count='true' aria-label='Star DesignRevision/shards-dashboard on GitHub') Star
+            //-<iframe style="width: 91px; height: 21px;"src="https://yvoschaap.com/producthunt/counter.html#href=https%3A%2F%2Fwww.producthunt.com%2Fr%2Fp%2F112998&layout=wide" width="56" height="65" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+        #social-share(data-url='https://designrevision.com/downloads/shards-dashboard-lite/' data-text='🔥 Check out Shards Dashboard Lite, a free and beautiful Bootstrap 4 admin dashboard template!' data-title='share')
+        .loading-overlay
+          .spinner
+      .close
+        i.material-icons close
+    .color-switcher-toggle.animated.pulse.infinite
+      i.material-icons settings
+    .container-fluid
+      .row
+        //-Main Sidebar
+        aside.main-sidebar.col-12.col-md-3.col-lg-2.px-0
+          .main-navbar
+            nav.navbar.align-items-stretch.navbar-light.bg-white.flex-md-nowrap.border-bottom.p-0
+              a.navbar-brand.w-100.mr-0(href='#' style='line-height: 25px;')
+                .d-table.m-auto
+                  img#main-logo.d-inline-block.align-top.mr-1(style='max-width: 25px;' src='images/shards-dashboards-logo.svg' alt='Shards Dashboard')
+                  span.d-none.d-md-inline.ml-1 Shards Dashboard
+              a.toggle-sidebar.d-sm-inline.d-md-none.d-lg-none
+                i.material-icons &#xE5C4;
+          form.main-sidebar__search.w-100.border-right.d-sm-flex.d-md-none.d-lg-none(action='#')
+            .input-group.input-group-seamless.ml-3
+              .input-group-prepend
+                .input-group-text
+                  i.fas.fa-search
+              input.navbar-search.form-control(type='text' placeholder='Search for something...' aria-label='Search')
+          .nav-wrapper
+            ul.nav.flex-column
+              li.nav-item
+                a.nav-link.active(href='dashboard.html')
+                  i.material-icons edit
+                  span Blog Dashboard
+              li.nav-item
+                a.nav-link(href='components-blog-posts.html')
+                  i.material-icons vertical_split
+                  span Blog Posts
+              li.nav-item
+                a.nav-link(href='add-new-post.html')
+                  i.material-icons note_add
+                  span Add New Post
+              li.nav-item
+                a.nav-link(href='form-components.html')
+                  i.material-icons view_module
+                  span Forms &amp; Components
+              li.nav-item
+                a.nav-link(href='tables.html')
+                  i.material-icons table_chart
+                  span Tables
+              li.nav-item
+                a.nav-link(href='user-profile-lite.html')
+                  i.material-icons person
+                  span User Profile
+              li.nav-item
+                a.nav-link(href='errors.html')
+                  i.material-icons error
+                  span Errors
+        //-End Main Sidebar
+        main.main-content.col-lg-10.col-md-9.col-sm-12.p-0.offset-lg-2.offset-md-3
+          .main-navbar.sticky-top.bg-white
+            //-Main Navbar
+            nav.navbar.align-items-stretch.navbar-light.flex-md-nowrap.p-0
+              form.main-navbar__search.w-100.d-none.d-md-flex.d-lg-flex(action='#')
+                .input-group.input-group-seamless.ml-3
+                  .input-group-prepend
+                    .input-group-text
+                      i.fas.fa-search
+                  input.navbar-search.form-control(type='text' placeholder='Search for something...' aria-label='Search')
+              ul.navbar-nav.border-left.flex-row
+                li.nav-item.border-right.dropdown.notifications
+                  a#dropdownMenuLink.nav-link.nav-link-icon.text-center(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    .nav-link-icon__wrapper
+                      i.material-icons &#xE7F4;
+                      span.badge.badge-pill.badge-danger 2
+                  .dropdown-menu.dropdown-menu-small(aria-labelledby='dropdownMenuLink')
+                    a.dropdown-item(href='#')
+                      .notification__icon-wrapper
+                        .notification__icon
+                          i.material-icons &#xE6E1;
+                      .notification__content
+                        span.notification__category Analytics
+                        p
+                          | Your website&rsquo;s active users count increased by
+                          span.text-success.text-semibold 28%
+                          |  in the last week. Great job!
+                    a.dropdown-item(href='#')
+                      .notification__icon-wrapper
+                        .notification__icon
+                          i.material-icons &#xE8D1;
+                      .notification__content
+                        span.notification__category Sales
+                        p
+                          | Last week your store&rsquo;s sales count decreased by
+                          span.text-danger.text-semibold 5.52%
+                          | . It could have been worse!
+                    a.dropdown-item.notification__all.text-center(href='#')  View all Notifications 
+                li.nav-item.dropdown
+                  a.nav-link.dropdown-toggle.text-nowrap.px-3(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false')
+                    img.user-avatar.rounded-circle.mr-2(src='images/avatars/0.jpg' alt='User Avatar')
+                    span.d-none.d-md-inline-block Seirra Brooks
+                  .dropdown-menu.dropdown-menu-small
+                    a.dropdown-item(href='user-profile-lite.html')
+                      i.material-icons &#xE7FD;
+                      |  Profile
+                    a.dropdown-item(href='components-blog-posts.html')
+                      i.material-icons vertical_split
+                      |  Blog Posts
+                    a.dropdown-item(href='add-new-post.html')
+                      i.material-icons note_add
+                      |  Add New Post
+                    .dropdown-divider
+                    //-
+                    //-
+                      <a href="#" class="btn btn-primary btn-lg" id="signout-button">
+                      Logout (from index.html)
+                      </a>
+                    //-
+                    a#signout-button.dropdown-item.text-danger.btn.btn-primary.btn-sm(href='/')
+                      i.material-icons.text-danger &#xE879;
+                      |  Logout
+              nav.nav
+                a.nav-link.nav-link-icon.toggle-sidebar.d-md-inline.d-lg-none.text-center.border-left(href='#' data-toggle='collapse' data-target='.header-navbar' aria-expanded='false' aria-controls='header-navbar')
+                  i.material-icons &#xE5D2;
+          //-/ .main-navbar

@@ -1,0 +1,79 @@
+// Page Header
+.page-header.row.no-gutters.py-4
+  .col-12.col-sm-4.text-center.text-sm-left.mb-0
+    span.text-uppercase.page-subtitle Blog Posts
+    h3.page-title Add New Post
+// End Page Header
+.row
+  .col-lg-9.col-md-12
+    // Add New Post Form
+    .card.card-small.mb-3
+      .card-body
+        form.add-new-post
+          input.form-control.form-control-lg.mb-3(type='text' placeholder='Your Post Title')
+          #editor-container.add-new-post__editor.mb-1
+    // / Add New Post Form
+  .col-lg-3.col-md-12
+    // Post Overview
+    .card.card-small.mb-3
+      .card-header.border-bottom
+        h6.m-0 Actions
+      .card-body.p-0
+        ul.list-group.list-group-flush
+          li.list-group-item.p-3
+            span.d-flex.mb-2
+              i.material-icons.mr-1 flag
+              strong.mr-1 Status:
+              |  Draft
+              a.ml-auto(href='#') Edit
+            span.d-flex.mb-2
+              i.material-icons.mr-1 visibility
+              strong.mr-1 Visibility:
+              strong.text-success Public
+              a.ml-auto(href='#') Edit
+            span.d-flex.mb-2
+              i.material-icons.mr-1 calendar_today
+              strong.mr-1 Schedule:
+              |  Now
+              a.ml-auto(href='#') Edit
+            span.d-flex
+              i.material-icons.mr-1 score
+              strong.mr-1 Readability:
+              strong.text-warning Ok
+          li.list-group-item.d-flex.px-3
+            button.btn.btn-sm.btn-outline-accent
+              i.material-icons save
+              |  Save Draft
+            button.btn.btn-sm.btn-accent.ml-auto
+              i.material-icons file_copy
+              |  Publish
+    // / Post Overview
+    // Post Overview
+    .card.card-small.mb-3
+      .card-header.border-bottom
+        h6.m-0 Categories
+      .card-body.p-0
+        ul.list-group.list-group-flush
+          li.list-group-item.px-3.pb-2
+            .custom-control.custom-checkbox.mb-1
+              input#category1.custom-control-input(type='checkbox' checked='')
+              label.custom-control-label(for='category1') Uncategorized
+            .custom-control.custom-checkbox.mb-1
+              input#category2.custom-control-input(type='checkbox' checked='')
+              label.custom-control-label(for='category2') Design
+            .custom-control.custom-checkbox.mb-1
+              input#category3.custom-control-input(type='checkbox')
+              label.custom-control-label(for='category3') Development
+            .custom-control.custom-checkbox.mb-1
+              input#category4.custom-control-input(type='checkbox')
+              label.custom-control-label(for='category4') Writing
+            .custom-control.custom-checkbox.mb-1
+              input#category5.custom-control-input(type='checkbox')
+              label.custom-control-label(for='category5') Books
+          li.list-group-item.d-flex.px-3
+            .input-group
+              input.form-control(type='text' placeholder='New category' aria-label='Add new category' aria-describedby='basic-addon2')
+              .input-group-append
+                button.btn.btn-white.px-2(type='button')
+                  i.material-icons add
+    // / Post Overview
