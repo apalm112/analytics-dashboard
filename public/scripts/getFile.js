@@ -18,13 +18,18 @@ document.addEventListener("DOMContentLoaded", event => {
   let options = {
     decrypt: true
   }
+  var STORAGE_FILE = 'text.json';
   var handleInsert = document.getElementById('insert');
   userSession.getFile('/saveDraftText.txt', options)
+  //  userSession.getFile(STORAGE_FILE , options)
     .then((fileContents) => {
       // saveDraftText.txt exists now, and has the contents of getText variable..
-      console.log('fileContents: ', fileContents);
+      // console.log('fileContents: ', fileContents);
       // This works! 
-      // TODO: Now need to dynamically add the file content to the components-blog-posts.html page
+      // TODO: needs Title, Background-image, <a href="<Subject>" ie--Business, Date, Size
+      //       would be easier to implement w/ Pug templates, then could use if fileContents, for each fileContent p={this.fileContent}
+
+    // could use .forEach(), ?.map(), .filter()?      
       handleInsert.append(fileContents);
     });
 });

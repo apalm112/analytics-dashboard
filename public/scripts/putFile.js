@@ -23,7 +23,9 @@ document.addEventListener("DOMContentLoaded", event => {
     let options = {
       encrypt: true
     }
-    userSession.putFile("/saveDraftText.txt", getText, options)
+    var STORAGE_FILE = 'text.json';
+    // userSession.putFile("/saveDraftText.txt", getText, options)
+    userSession.putFile(STORAGE_FILE, JSON.stringify(getText), options)
       .then(() => {
         // saveDraftText.txt exists now, and has the contents of getText variable..
       })
