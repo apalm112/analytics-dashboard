@@ -18,11 +18,13 @@ document.addEventListener("DOMContentLoaded", event => {
   let options = {
     decrypt: true
   }
+  var handleInsert = document.getElementById('insert');
   userSession.getFile('/saveDraftText.txt', options)
     .then((fileContents) => {
       // saveDraftText.txt exists now, and has the contents of getText variable..
-      console.log('/saveDraftText.txt');
       console.log('fileContents: ', fileContents);
-      
+      // This works! 
+      // TODO: Now need to dynamically add the file content to the components-blog-posts.html page
+      handleInsert.append(fileContents);
     });
 });
