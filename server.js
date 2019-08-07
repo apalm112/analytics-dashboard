@@ -6,8 +6,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'pug');
 
 function allowCrossDomain (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
