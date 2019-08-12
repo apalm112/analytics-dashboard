@@ -1,18 +1,17 @@
 const express = require('express');
 const open = require('open');
+// const router = require('./routes.js');
 const createError = require('http-errors');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const router = require('./routes/index');
-
 const app = express();
 const port = process.env.PORT || 5000;
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'pug');
 
 function allowCrossDomain (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
