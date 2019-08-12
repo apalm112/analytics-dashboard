@@ -1,0 +1,101 @@
+extends main
+
+block content
+  // Page Header
+  .page-header.row.no-gutters.py-4
+    .col-12.col-sm-4.text-center.text-sm-left.mb-0
+      span.text-uppercase.page-subtitle Overview
+      h3.page-title Data Tables
+  // End Page Header
+  // Default Light Table
+  .row
+    .col
+      .card.card-small.mb-4
+        .card-header.border-bottom
+          h6.m-0 Active Users
+        .card-body.p-0.pb-3.text-center
+          table.table.mb-0
+            thead.bg-light
+              tr
+                th.border-0(scope='col') #
+                th.border-0(scope='col') First Name
+                th.border-0(scope='col') Last Name
+                th.border-0(scope='col') Country
+                th.border-0(scope='col') City
+                th.border-0(scope='col') Phone
+            tbody
+              tr
+                td 1
+                td Ali
+                td Kerry
+                td Russian Federation
+                td Gda&nacute;sk
+                td 107-0339
+              tr
+                td 2
+                td Clark
+                td Angela
+                td Estonia
+                td Borghetto di Vara
+                td 1-660-850-1647
+              tr
+                td 3
+                td Jerry
+                td Nathan
+                td Cyprus
+                td Braunau am Inn
+                td 214-4225
+              tr
+                td 4
+                td Colt
+                td Angela
+                td Liberia
+                td Bad Hersfeld
+                td 1-848-473-7416
+  // End Default Light Table
+  // Default Dark Table
+  .row
+    .col
+      .card.card-small.overflow-hidden.mb-4
+        .card-header.bg-dark
+          h6.m-0.text-white Inactive Users
+        .card-body.p-0.pb-3.bg-dark.text-center
+          table.table.table-dark.mb-0
+            thead.thead-dark
+              tr
+                th.border-bottom-0(scope='col') #
+                th.border-bottom-0(scope='col') First Name
+                th.border-bottom-0(scope='col') Last Name
+                th.border-bottom-0(scope='col') Country
+                th.border-bottom-0(scope='col') City
+                th.border-bottom-0(scope='col') Phone
+            tbody
+              tr
+                td 1
+                td Graham
+                td Brent
+                td Benin
+                td Ripabottoni
+                td 1-512-760-9094
+              tr
+                td 2
+                td Clark
+                td Angela
+                td Estonia
+                td Borghetto di Vara
+                td 1-660-850-1647
+              tr
+                td 3
+                td Wylie
+                td Joseph
+                td Korea, North
+                td Guelph
+                td 325-4351
+              tr
+                td 4
+                td Garth
+                td Clementine
+                td Indonesia
+                td Narcao
+                td 722-8264
+  // End Default Dark Table

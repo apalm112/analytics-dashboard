@@ -1,0 +1,279 @@
+extends main
+  // Page Header
+  .page-header.row.no-gutters.py-4.mb-3.border-bottom
+    .col-12.col-sm-4.text-center.text-sm-left.mb-0
+      span.text-uppercase.page-subtitle Overview
+      h3.page-title Forms &amp; Components
+  // End Page Header
+  .row.mb-2
+    .col-12
+      span.d-block.mb-2.text-muted(style='font-size: 16px;')
+        strong Colors
+    .col.mb-4
+      .bg-primary.rounded.text-white.text-center.p-3(style='box-shadow: inset 0 0 5px rgba(0,0,0,.2);') Primary
+    .col.mb-4
+      .bg-secondary.rounded.text-white.text-center.p-3(style='box-shadow: inset 0 0 5px rgba(0,0,0,.2);') Secondary
+    .col.mb-4
+      .bg-success.rounded.text-white.text-center.p-3(style='box-shadow: inset 0 0 5px rgba(0,0,0,.2);') Success
+    .col.mb-4
+      .bg-info.rounded.text-white.text-center.p-3(style='box-shadow: inset 0 0 5px rgba(0,0,0,.2);') Info
+    .col.mb-4
+      .bg-warning.rounded.text-white.text-center.p-3(style='box-shadow: inset 0 0 5px rgba(0,0,0,.2);') Warning
+    .col.mb-4
+      .bg-danger.rounded.text-white.text-center.p-3(style='box-shadow: inset 0 0 5px rgba(0,0,0,.2);') Danger
+    .col.mb-4
+      .bg-dark.rounded.text-white.text-center.p-3(style='box-shadow: inset 0 0 5px rgba(0,0,0,.2);') Dark
+  .row
+    .col-lg-8.mb-4
+      .card.card-small.mb-4
+        .card-header.border-bottom
+          h6.m-0 Form Inputs
+        ul.list-group.list-group-flush
+          li.list-group-item.p-0.px-3.pt-3
+            .row
+              .col-sm-12.col-md-4.mb-3
+                // Checkboxes
+                strong.text-muted.d-block.mb-2 Checkboxes
+                fieldset
+                  .custom-control.custom-checkbox.mb-1
+                    input#formsCheckboxDefault.custom-control-input(type='checkbox')
+                    label.custom-control-label(for='formsCheckboxDefault') Default
+                  .custom-control.custom-checkbox.mb-1
+                    input#formsCheckboxChecked.custom-control-input(type='checkbox' checked='')
+                    label.custom-control-label(for='formsCheckboxChecked') Checked
+                  .custom-control.custom-checkbox.mb-1
+                    input#formsCheckboxDisabled.custom-control-input(type='checkbox' disabled='')
+                    label.custom-control-label(for='formsCheckboxDisabled') Disabled
+                  .custom-control.custom-checkbox.mb-1
+                    input#formsCheckboxDisabledChecked.custom-control-input(type='checkbox' disabled='' checked='')
+                    label.custom-control-label(for='formsCheckboxDisabledChecked') Disabled Checked
+                // / Checkboxes
+              .col-sm-12.col-md-4.mb-3
+                // Radios
+                strong.text-muted.d-block.mb-2 Radio Buttons
+                fieldset
+                  .custom-control.custom-radio.mb-1
+                    input#formsRadioDefault.custom-control-input(type='radio' name='formsRadioDefault')
+                    label.custom-control-label(for='formsRadioDefault') Default
+                  .custom-control.custom-radio.mb-1
+                    input#formsRadioChecked.custom-control-input(type='radio' name='formsRadioChecked' checked='')
+                    label.custom-control-label(for='formsRadioChecked') Checked
+                  .custom-control.custom-radio.mb-1
+                    input#formsRadioDisabled.custom-control-input(type='radio' name='formsRadioDisabled' disabled='')
+                    label.custom-control-label(for='formsRadioDisabled') Disabled
+                  .custom-control.custom-radio.mb-1
+                    input#formsRadioDisabledChecked.custom-control-input(type='radio' name='formsRadioDisabledChecked' disabled='' checked='')
+                    label.custom-control-label(for='formsRadioDisabledChecked') Disabled Checked
+                // / Radios
+              .col-sm-12.col-md-4.mb-3
+                // Toggles
+                fieldset
+                  strong.text-muted.d-block.mb-2 Toggle Switches
+                  .custom-control.custom-toggle.custom-toggle-sm.mb-1
+                    input#customToggle1.custom-control-input(type='checkbox' name='customToggle1')
+                    label.custom-control-label(for='customToggle1') Default
+                  .custom-control.custom-toggle.custom-toggle-sm.mb-1
+                    input#customToggle2.custom-control-input(type='checkbox' name='customToggle2' checked='checked')
+                    label.custom-control-label(for='customToggle2') Checked
+                  .custom-control.custom-toggle.custom-toggle-sm.mb-1
+                    input#customToggle3.custom-control-input(type='checkbox' name='customToggle3' disabled='disabled')
+                    label.custom-control-label(for='customToggle3') Disabled
+                  .custom-control.custom-toggle.custom-toggle-sm.mb-1
+                    input#customToggle4.custom-control-input(type='checkbox' name='customToggle4' checked='checked' disabled='disabled')
+                    label.custom-control-label(for='customToggle4') Disabled Checked
+                // / Toggles
+          li.list-group-item.p-3
+            // Small Buttons
+            strong.text-muted.d-block.my-2 Small Buttons
+            .row.mb-3
+              .col
+                button.mb-2.btn.btn-sm.btn-primary.mr-1(type='button') Primary
+                button.mb-2.btn.btn-sm.btn-secondary.mr-1(type='button') Secondary
+                button.mb-2.btn.btn-sm.btn-success.mr-1(type='button') Success
+                button.mb-2.btn.btn-sm.btn-danger.mr-1(type='button') Danger
+                button.mb-2.btn.btn-sm.btn-warning.mr-1(type='button') Warning
+                button.mb-2.btn.btn-sm.btn-info.mr-1(type='button') Info
+                button.mb-2.btn.btn-sm.btn-dark.mr-1(type='button') Dark
+                button.mb-2.btn.btn-sm.btn-white.mr-1(type='button') White
+            // / Small Buttons
+            // Small Outline Buttons
+            strong.text-muted.d-block.mb-2 Small Outline Buttons
+            .row
+              .col
+                button.mb-2.btn.btn-sm.btn-outline-primary.mr-1(type='button') Primary
+                button.mb-2.btn.btn-sm.btn-outline-secondary.mr-1(type='button') Secondary
+                button.mb-2.btn.btn-sm.btn-outline-success.mr-1(type='button') Success
+                button.mb-2.btn.btn-sm.btn-outline-danger.mr-1(type='button') Danger
+                button.mb-2.btn.btn-sm.btn-outline-warning.mr-1(type='button') Warning
+                button.mb-2.btn.btn-sm.btn-outline-info.mr-1(type='button') Info
+                button.mb-2.btn.btn-sm.btn-outline-dark.mr-1(type='button') Dark
+                button.mb-2.btn.btn-sm.btn-outline-light.mr-1(type='button') Light
+            // / Small Outline Buttons
+          li.list-group-item.p-3
+            // Normal Buttons
+            strong.text-muted.d-block.my-2 Normal Buttons
+            .row.mb-3
+              .col
+                button.mb-2.btn.btn-primary.mr-2(type='button') Primary
+                button.mb-2.btn.btn-secondary.mr-2(type='button') Secondary
+                button.mb-2.btn.btn-success.mr-2(type='button') Success
+                button.mb-2.btn.btn-danger.mr-2(type='button') Danger
+                button.mb-2.btn.btn-warning.mr-2(type='button') Warning
+                button.mb-2.btn.btn-info.mr-2(type='button') Info
+                button.mb-2.btn.btn-dark.mr-2(type='button') Dark
+                button.mb-2.btn.btn-white.mr-2(type='button') White
+            // / Normal Buttons
+            // Normal Outline Buttons
+            strong.text-muted.d-block.mb-2 Normal Outline Buttons
+            .row
+              .col
+                button.mb-2.btn.btn-outline-primary.mr-2(type='button') Primary
+                button.mb-2.btn.btn-outline-secondary.mr-2(type='button') Secondary
+                button.mb-2.btn.btn-outline-success.mr-2(type='button') Success
+                button.mb-2.btn.btn-outline-danger.mr-2(type='button') Danger
+                button.mb-2.btn.btn-outline-warning.mr-2(type='button') Warning
+                button.mb-2.btn.btn-outline-info.mr-2(type='button') Info
+                button.mb-2.btn.btn-outline-dark.mr-2(type='button') Dark
+                button.mb-2.btn.btn-outline-light.mr-2(type='button') Light
+            // / Normal Outline Buttons
+          li.list-group-item.p-3
+            .row
+              .col-sm-12.col-md-6
+                strong.text-muted.d-block.mb-2 Forms
+                form
+                  .form-group
+                    .input-group.mb-3
+                      .input-group-prepend
+                        span#basic-addon1.input-group-text @
+                      input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='basic-addon1')
+                  .form-group
+                    input#inputPassword4.form-control(type='password' placeholder='Password' value='myCoolPassword')
+                  .form-group
+                    input#inputAddress.form-control(type='text' placeholder='1234 Main St' value='7898 Kensington Junction, New York, USA')
+                  .form-row
+                    .form-group.col-md-7
+                      input#inputCity.form-control(type='text' value='New York')
+                    .form-group.col-md-5
+                      select#inputState.form-control
+                        option(selected='') Choose...
+                        option ...
+              .col-sm-12.col-md-6
+                strong.text-muted.d-block.mb-2 Form Validation
+                form
+                  .form-row
+                    .form-group.col-md-6
+                      input#validationServer01.form-control.is-valid(type='text' placeholder='First name' value='Catalin' required='')
+                      .valid-feedback The first name looks good!
+                    .form-group.col-md-6
+                      input#validationServer02.form-control.is-valid(type='text' placeholder='Last name' value='Vasile' required='')
+                      .valid-feedback The last name looks good!
+                  .form-group
+                    input#validationServer03.form-control.is-invalid(type='text' placeholder='Username' value='catalin.vasile' required='')
+                    .invalid-feedback This username is taken.
+                  .form-group
+                    select.form-control.is-invalid
+                      option(selected='') Choose...
+                      option ...
+                    .invalid-feedback Please select your state.
+    .col-lg-4.mb-4
+      // Sliders & Progress Bars
+      .card.card-small.mb-4
+        .card-header.border-bottom
+          h6.m-0 Sliders &amp; Progress Bars
+        ul.list-group.list-group-flush
+          li.list-group-item.px-3
+            // Progress Bars
+            .mb-2
+              strong.text-muted.d-block.mb-3 Progress Bars
+              .progress.progress-sm.mb-3
+                #progress-bar-example-1.progress-bar(role='progressbar' style='width: 20%' aria-valuenow='20' aria-valuemin='0' aria-valuemax='100')
+              .progress.progress-sm.mb-3
+                #progress-bar-example-2.progress-bar.bg-info(role='progressbar' style='width: 40%' aria-valuenow='40' aria-valuemin='0' aria-valuemax='100')
+              .progress.progress-sm.mb-3
+                #progress-bar-example-3.progress-bar.bg-danger(role='progressbar' style='width: 60%' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100')
+              .progress.progress-sm
+                #progress-bar-example-4.progress-bar.bg-warning(role='progressbar' style='width: 80%' aria-valuenow='80' aria-valuemin='0' aria-valuemax='100')
+            // / Progress Bars
+          li.list-group-item.px-3
+            // Sliders
+            .mb-2
+              strong.text-muted.d-block Custom Sliders
+              #slider-example-1.slider-success.my-4
+                input.custom-slider-input(type='hidden')
+                input.custom-slider-input(type='hidden')
+              #slider-example-2.slider-info.my-4
+                input.custom-slider-input(type='hidden')
+                input.custom-slider-input(type='hidden')
+              #slider-example-3.mt-4
+                input.custom-slider-input(type='hidden')
+                input.custom-slider-input(type='hidden')
+            // / Sliders
+      // / Sliders & Progress Bars
+      // Input & Button Groups
+      .card.card-small.mb-4
+        .card-header.border-bottom
+          h6.m-0 Groups
+        ul.list-group.list-group-flush
+          li.list-group-item.px-3
+            form
+              // Button Groups
+              strong.text-muted.d-block.mb-2 Button Groups
+              .btn-group.btn-group-toggle.mb-3(data-toggle='buttons')
+                label.btn.btn-white.active
+                  input#option1(type='radio' name='options' autocomplete='off' checked='')
+                  |  Fizz
+                label.btn.btn-white
+                  input#option2(type='radio' name='options' autocomplete='off')
+                  |  Buzz
+                label.btn.btn-white
+                  input#option3(type='radio' name='options' autocomplete='off')
+                  |  Foo
+                label.btn.btn-white
+                  input#option4(type='radio' name='options' autocomplete='off')
+                  |  Bar
+              // / Button Groups
+              // Input Groups
+              strong.text-muted.d-block.mb-2 Input Groups
+              .input-group.mb-3
+                .input-group-prepend
+                  span.input-group-text @
+                input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='basic-addon1')
+              .input-group.mb-3
+                input.form-control(type='text' placeholder='' aria-label='' aria-describedby='basic-addon2' value='contact')
+                .input-group-append
+                  span.input-group-text @designrevision.com
+              .input-group.mb-3
+                .input-group-prepend
+                  span.input-group-text $
+                input.form-control(type='text' aria-label='Amount (to the nearest dollar)' value='1000')
+                .input-group-append
+                  span.input-group-text .00
+              // Input Groups
+              // Seamless Input Groups
+              strong.text-muted.d-block.mb-2 Seamless Input Groups
+              .input-group.mb-3
+                .input-group.input-group-seamless
+                  span.input-group-prepend
+                    span.input-group-text
+                      i.material-icons person
+                  input#form1-username.form-control(type='text' placeholder='Username' value='design.revision')
+              .input-group.mb-3
+                .input-group.input-group-seamless
+                  input#form2-password.form-control(type='password' placeholder='Password' value='mySuperSecretPa$$word')
+                  span.input-group-append
+                    span.input-group-text
+                      i.material-icons lock
+              // / Seamless Input Groups
+              // Input/Button Group
+              .input-group.mb-3
+                input.form-control(type='text' placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby='basic-addon2')
+                .input-group-append
+                  button.btn.btn-white(type='button') Button
+              // / Input/Button Group
+              // Input/Button Group
+              .input-group.mb-3
+                .input-group-prepend
+                  button.btn.btn-white(type='button') Button
+                input.form-control(type='text' placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby='basic-addon2')
+              // / Input/Button Group
+      // / Input & Button Groups
