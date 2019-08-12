@@ -1,7 +1,10 @@
 const express = require('express');
 const open = require('open');
-// const path = require('path');
 // const router = require('./routes.js');
+const createError = require('http-errors');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -18,11 +21,15 @@ function allowCrossDomain (req, res, next) {
 }
 
 app.use(allowCrossDomain);
-app.use('/', express.static(`${__dirname}/public`));
-
-// app.use('/', router);
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+// app.use('/', express.static(`${__dirname}/public`));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // TODO: add routes for taking authenticated User to analytics dashboard page.
+app.use('/', router);
 
 // Acts as a placeholder for the browser in this project. Otherwise the express global error handler will be triggered when the path is set to '/'
 app.get('/', (req, res) => {
@@ -31,7 +38,7 @@ app.get('/', (req, res) => {
 
 // Catches requests that fall through w/out triggering any route handlers, send 404 if no other route matched
 app.use((req, res, next) => {
-  let error = new Error('Something went wrong.  API Route Not Found.');
+  let error = new Error('Something went wrong.  Dashboard API Route Not Found.');
   error.status = 404;
   next(error);
 });

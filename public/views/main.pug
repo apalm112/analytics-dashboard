@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible' content='ie=edge')
+    title Shards Dashboard Lite - Free Bootstrap Admin Template &ndash; DesignRevision
+    meta(name='description' content='A high-quality & free Bootstrap admin dashboard template pack that comes with lots of templates and components.')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='icon' type='image/x-icon' href='favicon.ico')
+    link(href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+    link#main-stylesheet(rel='stylesheet' data-version='1.1.0' href='styles/shards-dashboards.1.1.0.min.css')
+    link(rel='stylesheet' href='styles/extras.1.1.0.min.css')
+    link(rel='stylesheet' href='styles/app.css')
+    script(async='' defer='' src='https://buttons.github.io/buttons.js')
+    script(src='scripts/bundle.js')
+    script(src='scripts/isUserSignedIn.js')
+    script(src='scripts/signOut.js')
+    include partials/header
+    body
+      block content
+      include dashboard
+      include user-profile-lite
+      include tables
+      include add-new-post
+      include components-blog-post
+      include errors
+      include form-components
+      include partials/footer

@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", event => {
   function showDashboard(profile) {
   // -have function return the HTML/index.html page
     window.location = 'dashboard.html'
+    // window.location = 'main'
   }
 
   if (userSession.isUserSignedIn()) {
@@ -29,5 +30,6 @@ document.addEventListener("DOMContentLoaded", event => {
     userSession.handlePendingSignIn().then(userData => {
       window.location = 'dashboard.html'
     })
-  }
-})
+  }    
+
+}); // end of document.addEventListener("DOMContentLoaded", )
