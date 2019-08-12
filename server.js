@@ -1,10 +1,10 @@
 const express = require('express');
 const open = require('open');
 // const router = require('./routes.js');
-const createError = require('http-errors');
+// const createError = require('http-errors');
 const path = require('path');
 // const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+// const logger = require('morgan');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -21,7 +21,7 @@ function allowCrossDomain (req, res, next) {
 }
 
 app.use(allowCrossDomain);
-app.use(logger('dev'));
+// app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // app.use(cookieParser());
