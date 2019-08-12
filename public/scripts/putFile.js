@@ -19,10 +19,17 @@ document.addEventListener("DOMContentLoaded", event => {
       encrypt: true
     }
     var STORAGE_FILE = 'text.json';
+    // TODO: ^--change this value to an incremental index number so that each file is unique.
+
     // userSession.putFile("/saveDraftText.txt", getText, options)
     userSession.putFile(STORAGE_FILE, JSON.stringify(getText), options)
       .then(() => {
         // saveDraftText.txt exists now, and has the contents of getText variable..
       })
+
+    // TODO: Clear the text from `handleGetSaveDraftText` when 'Save Draft' is clicked & `.putFile()` has executed.
+
+    // TODO: ?After file is saved to storage hub, redirect to components-blog-post.html?
+
   });
 });

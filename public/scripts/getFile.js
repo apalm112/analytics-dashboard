@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", event => {
     blog += '<a class="text-fiord-blue" href="#">Conduct at an replied removal an amongst</a>';
     blog += '</h5>';
     blog += '<p class="card-text d-inline-block mb-3" id="insert"></p>';
-    blog += '<span class="text-muted">28 February 2019</span>';
+    blog += '<span class="text-muted">12 August 2019</span>';
     blog += '</div>';
     blog += '</div>';
     blog += '</div>';
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", event => {
       // This works! 
       // TODO: needs blog post dynamically created forEach existing file
       // ?would be easier to implement w/ Pug templates, then could use if fileContents, for each fileContent p={this.fileContent}?
-    // could use .forEach(), ?.map(), .filter()?      
+    // could use .forEach(), ?.map(), .filter()?
     
     var handleInsert = document.getElementById('insert');
     handleInsert.append(fileContents);
@@ -60,4 +60,8 @@ document.addEventListener("DOMContentLoaded", event => {
     }
     // userSession.listFiles(getListFiles, Promise);
 
+  // userSession.deleteFile('text.json')
+   //     .then(() => {
+          // deleted
+     //   });
 });

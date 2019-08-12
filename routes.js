@@ -5,30 +5,28 @@ const router = express.Router();
 const AppConfig = require('blockstack').AppConfig;
 const UserSession = require('blockstack').UserSession;
 
-router.get('/', (req, res) => {
-  if (error) {
-    return next(error);
-  } else {
-    document.addEventListener("DOMContentLoaded", event => {
-      console.log('OVER HERE');
-      
-      const appConfig = new blockstack.AppConfig(['store_write', 'publish_data']);
-      const userSession = new blockstack.UserSession({ appConfig: appConfig });
-      window.userSession = userSession;
+router.get('/', (req, res, next) => {
+  document.addEventListener("DOMContentLoaded", event => {
+    
+    console.log('OVER HERE');
+    
+    const appConfig = new blockstack.AppConfig(['store_write', 'publish_data']);
+    const userSession = new blockstack.UserSession({ appConfig: appConfig });
+    window.userSession = userSession;
 
-      document.getElementById('signin-button').addEventListener('click', event => {
-        event.preventDefault();
-        userSession.redirectToSignIn();
-      })
+    document.getElementById('signin-button').addEventListener('click', event => {
+      event.preventDefault();
+      userSession.redirectToSignIn();
+    })
 
-      document.getElementById('signout-button').addEventListener('click', event => {
-        event.preventDefault();
-        userSession.signUserOut();
-        window.location = window.location.origin
-      })
-    });
-    res.redirect('/index.html');
-  }
+    document.getElementById('signout-button').addEventListener('click', event => {
+      event.preventDefault();
+      userSession.signUserOut();
+      window.location = window.location.origin
+    })
+  });
+  if (err) { res.status(500).send(err); }
+  res.redirect('/index.html');
 });
 
 router.get('/dashboard', (req, res) => {
